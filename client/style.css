@@ -1,0 +1,97 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: rgb(249, 253, 253);
+}
+
+@media all and (max-width: 2500px) {
+  .body {
+    display: grid;
+    grid-template-columns: repeat(2, 6% 95%);
+    padding: 0 25% 0 25%;
+  }
+  .body2 {
+    display: grid;
+    grid-template-columns: repeat(2, 20% 80%);
+    padding: 0 25% 0 25%;
+  }
+  nav {
+    display: grid;
+    background: red;
+    align-items: center;
+    /* height: 100vh; */
+  }
+  .logoCon {
+    display: flex;
+    align-items: center;
+    /* background: purple; */
+    margin: 0 0 7vh 0;
+    padding: 0 0.5vw 0 0.5vw;
+    column-gap: 0.7vw;
+  }
+  #logo {
+    /* margin: 0 0 4vh 0; */
+  }
+  .menus {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5vh;
+  }
+  .menusCon {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5vw 0 0.5vw;
+    column-gap: 0.7vw;
+  }
+  .menusCon:hover {
+    background: purple;
+    cursor: pointer;
+    border-bottom-left-radius: 38%;
+    border-top-left-radius: 38%;
+    margin-left: 0.2vw;
+  }
+  .menusConActive {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5vw 0 0.5vw;
+    column-gap: 0.7vw;
+    background: purple;
+    cursor: pointer;
+    border-bottom-left-radius: 38%;
+    border-top-left-radius: 38%;
+    margin-left: 0.2vw;
+  }
+  .material-symbols-outlined,
+  .menuIllus {
+    font-size: 2.2vw;
+    color: white;
+  }
+  .menuIllus {
+    font-size: clamp(14px, 1.2vw, 1.3vw);
+  }
+  .home {
+    background: yellow;
+  }
+}
+@media all and (max-width: 2000px) {
+  .body {
+    grid-template-columns: repeat(2, 5% 95%);
+    padding: 0 20% 0 20%;
+  }
+  .body2 {
+    display: grid;
+    grid-template-columns: repeat(2, 20% 80%);
+    padding: 0 20% 0 20%;
+  }
+}
+@media all and (max-width: 1600px) {
+  .body {
+    display: grid;
+    grid-template-columns: repeat(2, 3% 97%);
+    padding: 0;
+  }
+  .body2 {
+    grid-template-columns: repeat(2, 10% 90%);
+    padding: 0;
+  }
+}

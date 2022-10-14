@@ -2,30 +2,42 @@ body {
   padding: 0;
   margin: 0;
   background: rgb(249, 253, 253);
+  background: black;
+  /* background: rgb(191, 10, 182); */
 }
 
 @media all and (max-width: 2500px) {
+  ::-webkit-scrollbar {
+    background: rgb(0, 0, 0, 0.6);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(191, 10, 182);
+    border-radius: 30px;
+  }
   .body {
     display: grid;
     grid-template-columns: repeat(2, 6% 95%);
-    padding: 0 25% 0 25%;
+    padding: 0 20% 0 20%;
   }
   .body2 {
     display: grid;
-    grid-template-columns: repeat(2, 20% 80%);
-    padding: 0 25% 0 25%;
+    grid-template-columns: repeat(2, 15% 85%);
+    padding: 0 15% 0 15%;
   }
   nav {
     display: grid;
-    background: red;
+    background: rgb(191, 10, 182);
+    background: linear-gradient(to top, rgb(191, 10, 182), rgb(120, 10, 180));
     align-items: center;
-    /* height: 100vh; */
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.6);
+    border-radius: 30px;
+    margin: 1.5vh 0 1.5vh 0;
   }
+
   .logoCon {
     display: flex;
     align-items: center;
-    /* background: purple; */
-    margin: 0 0 7vh 0;
+    margin: 0 0 5vh 0;
     padding: 0 0.5vw 0 0.5vw;
     column-gap: 0.7vw;
   }
@@ -35,21 +47,29 @@ body {
   .menus {
     display: flex;
     flex-direction: column;
-    row-gap: 2.5vh;
+    row-gap: 1.7vh;
+    width: 100%;
   }
   .menusCon {
     display: flex;
     align-items: center;
     padding: 0 0.5vw 0 0.5vw;
     column-gap: 0.7vw;
+    width: 100%;
   }
+  .menusCon:nth-child(9) {
+    margin: 2vh 0 0 0;
+  }
+
   .menusCon:hover {
-    background: purple;
+    background: rgb(191, 10, 182);
+    background: white;
     cursor: pointer;
-    border-bottom-left-radius: 38%;
-    border-top-left-radius: 38%;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
     margin-left: 0.2vw;
   }
+
   .menusConActive {
     display: flex;
     align-items: center;
@@ -63,25 +83,120 @@ body {
   }
   .material-symbols-outlined,
   .menuIllus {
-    font-size: 2.2vw;
+    font-size: clamp(24px, 2vw, 2.1vw);
+    color: rgb(191, 10, 182);
+    color: black;
     color: white;
   }
   .menuIllus {
+    font: clamp(14px, 1.2vw, 1.3vw) Josefin slab;
+    font-weight: 500;
+    visibility: hidden;
+  }
+  .logoCon .menuIllus {
+    font: clamp(14px, 1.2vw, 1.3vw) Josefin slab;
+    font-weight: 700;
+  }
+  .menuIllus2 {
     font-size: clamp(14px, 1.2vw, 1.3vw);
+    visibility: visible;
   }
   .home {
-    background: yellow;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(1, 36% 50%);
+    background: transparent;
+    column-gap: 4vw;
+    padding: 0 2% 0 2%;
+    background: white;
+    height: 100vh;
+  }
+  .profileImg {
+    width: 100%;
+    border-radius: 5%;
+    /* background: rgb(191, 10, 182, 0.8); */
+
+    /* border-top-left-radius: 55%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 330px;
+    border-bottom-right-radius: 350px; */
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.1);
+    object-fit: cover;
+  }
+  .profileImg:hover {
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
+    margin: 1vh 0 0 0;
+  }
+  .homeSecond {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5vw;
+    /* background: red; */
+  }
+  .homeIcon .material-symbols-outlined {
+    display: flex;
+    flex-direction: column;
+    height: 5vh;
+    color: rgb(191, 10, 182);
+    cursor: pointer;
+  }
+  .homeIcon .material-symbols-outlined:hover {
+    color: black;
+  }
+  .homeArticle {
+    /* background: red; */
+  }
+  .home .h1 {
+    font: clamp(32px, 3.1vw, 3.15vw) poppins;
+    font-weight: 600;
+    margin: 0;
+    /* color: rgb(191, 10, 182); */
+    /* color: rgb(0, 0, 0);
+    color: black; */
+  }
+  .home .p {
+    font: clamp(18px, 1.6vw, 1.65vw) josefin Slab;
+    font-weight: 300;
+    margin: 2vh 0 0 0;
+    color: rgb(0, 0, 0, 0.8);
+    color: black;
+  }
+  .home .p2 {
+    /* color: rgb(191, 10, 182); */
+    font: clamp(15px, 1.3vw, 1.35vw) josefin Slab;
+    font-weight: 300;
+    margin: 2vh 0 0 0;
+    color: rgb(0, 0, 0, 0.6);
+  }
+  .home .Btn {
+    font: clamp(18px, 1.6vw, 1.6vw) josefin Slab;
+    color: white;
+    background: linear-gradient(to left, rgb(191, 10, 182), rgb(100, 10, 170));
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    padding: 2vh 1.5vw 2vh 1.5vw;
+    margin: 4vh 0 0 0;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5vw;
+  }
+  .home .Btn:hover {
+    background: linear-gradient(to right, rgb(191, 10, 182), rgb(100, 10, 170));
+    color: rgb(255, 255, 255, 0.6);
+    cursor: pointer;
   }
 }
 @media all and (max-width: 2000px) {
   .body {
     grid-template-columns: repeat(2, 5% 95%);
-    padding: 0 20% 0 20%;
+    padding: 0 15% 0 15%;
   }
   .body2 {
     display: grid;
-    grid-template-columns: repeat(2, 20% 80%);
-    padding: 0 20% 0 20%;
+    grid-template-columns: repeat(2, 15% 85%);
+    padding: 0 10% 0 10%;
   }
 }
 @media all and (max-width: 1600px) {
@@ -93,5 +208,63 @@ body {
   .body2 {
     grid-template-columns: repeat(2, 10% 90%);
     padding: 0;
+  }
+  .home {
+    padding: 0 10% 0 10%;
+    grid-template-columns: repeat(2, 36%);
+  }
+}
+@media all and (max-width: 1100px) {
+  .body {
+    display: grid;
+    grid-template-columns: repeat(2, 5% 95%);
+    padding: 0;
+  }
+  .body2 {
+    grid-template-columns: repeat(2, 14% 86%);
+    padding: 0;
+  }
+  .logoCon {
+    padding: 0 0vw 0 1.3vw;
+  }
+  .menusCon {
+    padding: 0 0vw 0 1.3vw;
+  }
+  .menusCon:hover {
+    margin-left: 0;
+  }
+
+  .home {
+    padding: 0 10% 0 10%;
+    grid-template-columns: repeat(2, 36%);
+  }
+}
+@media all and (max-width: 800px) {
+  .body {
+    display: grid;
+    grid-template-columns: repeat(2, 7% 93%);
+    padding: 0;
+  }
+  .body2 {
+    grid-template-columns: repeat(2, 20% 80%);
+    padding: 0;
+  }
+
+  .home {
+    justify-items: center;
+    grid-template-columns: repeat(1, 100%);
+    padding: 0 10% 0 10%;
+  }
+  .profileImg {
+    width: 55%;
+  }
+  .homeSecond {
+    width: 75%;
+    margin-top: -35%;
+  }
+}
+@media all and (max-width: 600px) {
+  .home {
+    background: red;
   }
 }

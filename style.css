@@ -1,9 +1,10 @@
 body {
   padding: 0;
   margin: 0;
-  background: rgb(249, 253, 253);
-  background: black;
-  /* background: rgb(191, 10, 182); */
+  display: grid;
+  align-items: center;
+  height: 100vh;
+  background: white;
 }
 
 @media all and (max-width: 2500px) {
@@ -55,7 +56,7 @@ body {
     align-items: center;
     padding: 0 0.5vw 0 0.5vw;
     column-gap: 0.7vw;
-    width: 100%;
+    width: 70%;
   }
   .menusCon:nth-child(9) {
     margin: 2vh 0 0 0;
@@ -89,12 +90,12 @@ body {
     color: white;
   }
   .menuIllus {
-    font: clamp(14px, 1.2vw, 1.3vw) Josefin slab;
+    font-size: clamp(14px, 1.2vw, 1.3vw);
     font-weight: 500;
     visibility: hidden;
   }
   .logoCon .menuIllus {
-    font: clamp(14px, 1.2vw, 1.3vw) Josefin slab;
+    font-size: clamp(14px, 1.2vw, 1.3vw);
     font-weight: 700;
   }
   .menuIllus2 {
@@ -106,11 +107,11 @@ body {
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(1, 36% 50%);
+    background: white;
     background: transparent;
     column-gap: 4vw;
     padding: 0 2% 0 2%;
-    background: white;
-    height: 100vh;
+    /* height: 100vh; */
   }
   .profileImg {
     width: 100%;
@@ -148,7 +149,7 @@ body {
     /* background: red; */
   }
   .home .h1 {
-    font: clamp(32px, 3.1vw, 3.15vw) poppins;
+    font: clamp(30px, 2.9vw, 3vw) montserrat;
     font-weight: 600;
     margin: 0;
     /* color: rgb(191, 10, 182); */
@@ -156,21 +157,20 @@ body {
     color: black; */
   }
   .home .p {
-    font: clamp(18px, 1.6vw, 1.65vw) josefin Slab;
+    font: clamp(18px, 1.6vw, 1.65vw) roboto Slab;
     font-weight: 300;
     margin: 2vh 0 0 0;
-    color: rgb(0, 0, 0, 0.8);
-    color: black;
+    color: rgb(0, 0, 0, 1);
   }
   .home .p2 {
     /* color: rgb(191, 10, 182); */
-    font: clamp(15px, 1.3vw, 1.35vw) josefin Slab;
+    font: clamp(15px, 1.2vw, 1.25vw) roboto Slab;
     font-weight: 300;
     margin: 2vh 0 0 0;
-    color: rgb(0, 0, 0, 0.6);
+    color: rgb(0, 0, 0, 0.8);
   }
   .home .Btn {
-    font: clamp(18px, 1.6vw, 1.6vw) josefin Slab;
+    font: clamp(18px, 1.6vw, 1.6vw) roboto Slab;
     color: white;
     background: linear-gradient(to left, rgb(191, 10, 182), rgb(100, 10, 170));
     text-align: center;
@@ -235,8 +235,19 @@ body {
   }
 
   .home {
-    padding: 0 10% 0 10%;
-    grid-template-columns: repeat(2, 36%);
+    padding: 0 5% 0 5%;
+    grid-template-columns: repeat(1, 36% 46%);
+  }
+  .home .Btn {
+    padding: 1vh 1.5vw 1vh 1.5vw;
+    margin: 1.5vh 0 0 0;
+  }
+  .homeIcon .material-symbols-outlined {
+    height: 3.4vh;
+  }
+  .home .p2,
+  .home .p {
+    margin: 1vh 0 0 0;
   }
 }
 
@@ -261,15 +272,15 @@ body {
   }
   .homeSecond {
     width: 75%;
-    margin-top: -35%;
+    margin-top: -15%;
   }
 }
-@media all and (min-width: 750px) and (max-width: 900px) and (orientation: portrait) {
+/* @media all and (min-width: 750px) and (max-width: 900px) and (orientation: portrait) {
   .homeSecond {
     width: 75%;
-    margin-top: -43vh;
+    /* margin-top: -43vh; 
   }
-}
+} */
 @media all and (max-width: 600px) {
   .home {
     background: red;

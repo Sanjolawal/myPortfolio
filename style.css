@@ -1,9 +1,9 @@
 body {
   padding: 0;
   margin: 0;
-  display: grid;
+  /* display: grid;
   align-items: center;
-  height: 100vh;
+  height: 100vh; */
   background: white;
 }
 
@@ -111,7 +111,7 @@ body {
     background: transparent;
     column-gap: 4vw;
     padding: 0 2% 0 2%;
-    /* height: 100vh; */
+    height: 100vh;
   }
   .profileImg {
     width: 100%;
@@ -265,22 +265,24 @@ body {
   .home {
     justify-items: center;
     grid-template-columns: repeat(1, 100%);
-    padding: 0 10% 0 10%;
+    padding: 5% 10% 0 10%;
   }
   .profileImg {
     width: 55%;
   }
   .homeSecond {
     width: 75%;
-    margin-top: -15%;
+    margin-top: 5%;
   }
 }
-/* @media all and (min-width: 750px) and (max-width: 900px) and (orientation: portrait) {
-  .homeSecond {
-    width: 75%;
-    /* margin-top: -43vh; 
+@media all and (min-width: 750px)  and (orientation: portrait) {
+  .homeIcon .material-symbols-outlined {
+    height: 2.4vh;
   }
-} */
+  .home {
+    height: 50vh;
+  }
+}
 @media all and (max-width: 600px) {
   .home {
     background: red;

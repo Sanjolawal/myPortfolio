@@ -272,22 +272,26 @@ body {
     margin-top: -33%;
   }
 }
-@media all and (min-width: 750px) and (max-width: 880px) and (orientation: portrait) {
+
+@media all and (min-width: 750px) and (orientation: portrait) {
   .homeIcon .material-symbols-outlined {
-    height: 2.4vh;
+    height: 2.3vh;
   }
-  .home {
-    /* height: 50vh; */
-    /* margin-top: 5%; */
-  }
+
   .home .p2 {
-    padding: 1.5vh 2vw 1.5vh 2vw;
+    padding: 0.8vh 2vw 0.8vh 2vw;
   }
   .homeSecond {
     margin-top: -75%;
-    /* background: red; */
   }
 }
+
+@media all and (min-width: 880px) and (orientation: portrait) {
+  .homeSecond {
+    margin-top: 0%;
+  }
+}
+
 @media all and (max-width: 600px) {
   .home {
     background: red;

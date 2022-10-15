@@ -27,12 +27,15 @@ body {
   }
   nav {
     display: grid;
-    background: rgb(191, 10, 182);
     background: linear-gradient(to top, rgb(191, 10, 182), rgb(120, 10, 180));
     align-items: center;
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.6);
     border-radius: 30px;
     margin: 1.5vh 0 1.5vh 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1vh;
+    height: 98vh;
   }
 
   .logoCon {
@@ -86,7 +89,6 @@ body {
   .menuIllus {
     font-size: clamp(24px, 2vw, 2.1vw);
     color: rgb(191, 10, 182);
-    color: black;
     color: white;
   }
   .menuIllus {
@@ -111,17 +113,11 @@ body {
     background: transparent;
     column-gap: 4vw;
     padding: 0 2% 0 2%;
-    height: 100vh;
+    /* height: 100vh; */
   }
   .profileImg {
     width: 100%;
     border-radius: 5%;
-    /* background: rgb(191, 10, 182, 0.8); */
-
-    /* border-top-left-radius: 55%;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 330px;
-    border-bottom-right-radius: 350px; */
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.1);
     object-fit: cover;
   }
@@ -133,7 +129,6 @@ body {
     display: flex;
     align-items: center;
     column-gap: 1.5vw;
-    /* background: red; */
   }
   .homeIcon .material-symbols-outlined {
     display: flex;
@@ -145,9 +140,7 @@ body {
   .homeIcon .material-symbols-outlined:hover {
     color: black;
   }
-  .homeArticle {
-    /* background: red; */
-  }
+
   .home .h1 {
     font: clamp(30px, 2.9vw, 3vw) montserrat;
     font-weight: 600;
@@ -158,19 +151,23 @@ body {
   }
   .home .p {
     font: clamp(18px, 1.6vw, 1.65vw) roboto Slab;
-    font-weight: 300;
+    font-weight: 500;
     margin: 2vh 0 0 0;
-    color: rgb(0, 0, 0, 1);
+    color: rgb(0, 0, 0, 0.7);
   }
   .home .p2 {
     /* color: rgb(191, 10, 182); */
     font: clamp(15px, 1.2vw, 1.25vw) roboto Slab;
-    font-weight: 300;
+    font-weight: 600;
     margin: 2vh 0 0 0;
-    color: rgb(0, 0, 0, 0.8);
+    color: white;
+    width: fit-content;
+    padding: 2vh 2vw 2vh 2vw;
+    border-radius: 8px;
+    background: rgb(191, 10, 182);
   }
   .home .Btn {
-    font: clamp(18px, 1.6vw, 1.6vw) roboto Slab;
+    font: clamp(18px, 1.6vw, 1.6vw) roboto slab;
     color: white;
     background: linear-gradient(to left, rgb(191, 10, 182), rgb(100, 10, 170));
     text-align: center;
@@ -272,15 +269,23 @@ body {
   }
   .homeSecond {
     width: 75%;
-    margin-top: 5%;
+    margin-top: -33%;
   }
 }
-@media all and (min-width: 750px)  and (orientation: portrait) {
+@media all and (min-width: 750px) and (max-width: 880px) and (orientation: portrait) {
   .homeIcon .material-symbols-outlined {
     height: 2.4vh;
   }
   .home {
-    height: 50vh;
+    /* height: 50vh; */
+    /* margin-top: 5%; */
+  }
+  .home .p2 {
+    padding: 1.5vh 2vw 1.5vh 2vw;
+  }
+  .homeSecond {
+    margin-top: -75%;
+    /* background: red; */
   }
 }
 @media all and (max-width: 600px) {

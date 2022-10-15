@@ -1,9 +1,6 @@
 body {
   padding: 0;
   margin: 0;
-  /* display: grid;
-  align-items: center;
-  height: 100vh; */
   background: white;
 }
 
@@ -45,9 +42,7 @@ body {
     padding: 0 0.5vw 0 0.5vw;
     column-gap: 0.7vw;
   }
-  #logo {
-    /* margin: 0 0 4vh 0; */
-  }
+
   .menus {
     display: flex;
     flex-direction: column;
@@ -112,7 +107,6 @@ body {
     background: transparent;
     column-gap: 4vw;
     padding: 0 2% 0 2%;
-    /* height: 100vh; */
   }
   .profileImg {
     width: 100%;
@@ -144,9 +138,6 @@ body {
     font: clamp(30px, 2.9vw, 3vw) montserrat;
     font-weight: 600;
     margin: 0;
-    /* color: rgb(191, 10, 182); */
-    /* color: rgb(0, 0, 0);
-    color: black; */
   }
   .home .p {
     font: clamp(18px, 1.6vw, 1.65vw) roboto Slab;
@@ -155,7 +146,6 @@ body {
     color: rgb(0, 0, 0, 0.7);
   }
   .home .p2 {
-    /* color: rgb(191, 10, 182); */
     font: clamp(15px, 1.2vw, 1.25vw) roboto Slab;
     font-weight: 600;
     margin: 1vh 0 0 0;
@@ -281,18 +271,6 @@ body {
   }
 }
 
-@media all and (max-width: 750px) and (orientation: portrait) {
-  /* .homeSecond {
-    margin-top: -41.5vh;
-  } */
-}
-
-/* @media all and (min-width: 820px) and (orientation: portrait) {
-  .homeSecond {
-    margin-top: 0%;
-  }
-} */
-
 @media all and (max-width: 600px) {
   nav {
     display: none;
@@ -302,15 +280,13 @@ body {
   }
   .mobile {
     display: block;
-    /* height: 50vh;
-    background: red; */
   }
   .mobileFirst {
     display: grid;
     grid-template-columns: repeat(1, 20% 80%);
     justify-content: center;
     align-items: center;
-    margin: 5vh 0 0 0;
+    margin: 10vh 0 0 0;
   }
   .mobileIcons {
     display: flex;
@@ -358,7 +334,6 @@ body {
     font-weight: 600;
     margin: 1vh 10vw 0 0;
     color: rgb(255, 255, 255, 1);
-    /* color: rgb(0, 0, 0, 0.6); */
     width: fit-content;
     padding: 2vh 0.5vw 2vh 2vw;
     border-radius: 8px;
@@ -383,8 +358,6 @@ body {
     cursor: pointer;
   }
   .nav {
-    /* position: -webkit-sticky;
-    position: sticky; */
     position: fixed;
     bottom: 0;
     display: flex;
@@ -392,7 +365,6 @@ body {
     align-items: center;
     padding: 0 5vw 0 3vw;
     width: 92%;
-    /* background: red; */
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
   }
   .nav .h1 {
@@ -403,8 +375,6 @@ body {
     display: flex;
     align-items: center;
     column-gap: 3vw;
-    /* justify-content: space-between;
-    padding: 0 3vw 0 3vw; */
   }
   .second .material-symbols-outlined {
     color: black;

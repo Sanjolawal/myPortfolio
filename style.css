@@ -374,7 +374,7 @@ body {
   }
   .second {
     display: flex;
-    align-items: center;
+    align-self: center;
     column-gap: 3vw;
   }
   .second .material-symbols-outlined {
@@ -383,6 +383,43 @@ body {
   .second .material-symbols-outlined:hover {
     color: rgb(191, 10, 182);
     cursor: pointer;
+  }
+  .mobileMenu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    justify-items: center;
+    margin: 0 0 0 0;
+    z-index: 100;
+    background: white;
+    padding-top: 3vh;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
+  }
+  .mobileMain {
+    display: grid;
+    justify-items: center;
+    width: 90%;
+    grid-template-columns: repeat(3, 30%);
+    column-gap: 3.33vw;
+    row-gap: 3.5vh;
+  }
+  .mobileMenuCon {
+    display: grid;
+    justify-items: center;
+    align-self: center;
+  }
+  .mobileMenuCon:hover,
+  .mobileMenuCon .material-symbols-outlined:hover {
+    cursor: pointer;
+    color: rgb(191, 10, 182);
+  }
+  .mobileMenuCon .material-symbols-outlined {
+    color: black;
+    margin: 0;
+  }
+  .mobileMinfo {
+    margin-top: 0.5vh;
   }
 }
 

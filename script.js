@@ -2,11 +2,12 @@ const menus = document.querySelector(`.menus`);
 const menusCon = document.querySelectorAll(`.menusCon`);
 const menuOpener = document.querySelector(`#menuOpener`);
 const body = document.querySelector(`.body`);
+const mainbody = document.querySelector(`.mainBody`);
 const menuIllus = document.querySelectorAll(`.menuIllus`);
 const lightToggle = document.querySelectorAll(`#lightToggle`);
 const toggleValue = document.querySelector(`#toggleValue`);
-const mobile = document.querySelector(`.mobile`);
 const mobileMenu = document.querySelector(`.mobileMenu`);
+const mobileMenuCon = document.querySelectorAll(`.mobileMenuCon`);
 const mobileClose = document.querySelector(`#mobileClose`);
 const view = document.querySelector(`#view`);
 const h1 = document.querySelectorAll(`.h1`);
@@ -28,9 +29,20 @@ if (window.innerWidth < 821) {
 
 // light and dark mode saved to localstorage
 if (!localStorage.length || localStorage.getItem(`mode`) === `light`) {
-  if (location.pathname === `/index.html`) {
-    body.style.background = `white`;
-    mobile.style.background = `white`;
+  mainbody.style.background = `white`;
+  mobileMenu.style.background = `white`;
+  mobileMenuCon.forEach((each) => {
+    each.addEventListener(`mouseover`, function (e) {
+      each.firstElementChild.style.color = `rgb(191, 10, 182)`;
+      each.lastElementChild.style.color = `rgb(191, 10, 182)`;
+    });
+    each.addEventListener(`mouseout`, function () {
+      each.firstElementChild.style.color = `black`;
+      each.lastElementChild.style.color = `black`;
+    });
+  });
+
+  if (location.pathname === `/`) {
     h1.forEach((each) => {
       each.style.color = `black`;
     });
@@ -43,15 +55,31 @@ if (!localStorage.length || localStorage.getItem(`mode`) === `light`) {
   }
   lightToggle.forEach((each) => {
     if (window.innerWidth < 601) {
-      return (each.firstElementChild.innerText = `toggle_on`);
+      return (
+        (each.firstElementChild.innerText = `toggle_on`),
+        (each.firstElementChild.style.color = `black`),
+        (view.style.color = `black`)
+      );
     }
     each.firstElementChild.innerText = `toggle_on`;
     each.lastElementChild.innerText = `On`;
   });
 } else if (localStorage.getItem(`mode`) === `dark`) {
-  if (location.pathname === `/index.html`) {
-    body.style.background = `rgb(0,0,0,0.8)`;
-    mobile.style.background = `rgb(0,0,0,0.8)`;
+  mainbody.style.background = `rgb(0,0,0,0.8)`;
+  mobileMenu.style.background = `black`;
+  mobileMenuCon.forEach((each) => {
+    each.firstElementChild.style.color = `white`;
+    each.lastElementChild.style.color = `white`;
+    each.addEventListener(`mouseover`, function (e) {
+      each.firstElementChild.style.color = `rgb(191, 10, 182)`;
+      each.lastElementChild.style.color = `rgb(191, 10, 182)`;
+    });
+    each.addEventListener(`mouseout`, function () {
+      each.firstElementChild.style.color = `white`;
+      each.lastElementChild.style.color = `white`;
+    });
+  });
+  if (location.pathname === `/`) {
     profileImg.style.background = `white`;
     mobileProfile.style.background = `white`;
     h1.forEach((each) => {
@@ -71,7 +99,11 @@ if (!localStorage.length || localStorage.getItem(`mode`) === `light`) {
         (each.lastElementChild.innerText = `Off`)
       );
     }
-    return (each.firstElementChild.innerText = `toggle_off`);
+    return (
+      (each.firstElementChild.innerText = `toggle_off`),
+      (each.firstElementChild.style.color = `white`),
+      (view.style.color = `white`)
+    );
   });
 }
 
@@ -99,7 +131,7 @@ menuOpener.addEventListener(`click`, function () {
   menus.style.width = `${2.6}vw`;
 });
 
-// script for changing menus color on hover on desktops
+// script for changing menus color on hover on all devices
 menusCon.forEach((each) => {
   each.addEventListener(`mouseover`, function (e) {
     each.firstElementChild.style.color = `rgb(191, 10, 182)`;
@@ -116,9 +148,21 @@ lightToggle.forEach((each) => {
   each.addEventListener(`click`, () => {
     if (each.firstElementChild.innerText === `toggle_on`) {
       localStorage.setItem(`mode`, `dark`);
-      if (location.pathname === `/index.html`) {
-        body.style.background = `rgb(0,0,0,0.8)`;
-        mobile.style.background = `rgb(0,0,0,0.8)`;
+      mainbody.style.background = `rgb(0,0,0,0.8)`;
+      mobileMenu.style.background = `black`;
+      mobileMenuCon.forEach((each) => {
+        each.firstElementChild.style.color = `white`;
+        each.lastElementChild.style.color = `white`;
+        each.addEventListener(`mouseover`, function (e) {
+          each.firstElementChild.style.color = `rgb(191, 10, 182)`;
+          each.lastElementChild.style.color = `rgb(191, 10, 182)`;
+        });
+        each.addEventListener(`mouseout`, function () {
+          each.firstElementChild.style.color = `white`;
+          each.lastElementChild.style.color = `white`;
+        });
+      });
+      if (location.pathname === `/`) {
         profileImg.style.background = `white`;
         mobileProfile.style.background = `white`;
         h1.forEach((each) => {
@@ -137,12 +181,28 @@ lightToggle.forEach((each) => {
           (each.lastElementChild.innerText = `Off`)
         );
       }
-      return (each.firstElementChild.innerText = `toggle_off`);
+      return (
+        (each.firstElementChild.innerText = `toggle_off`),
+        (each.firstElementChild.style.color = `white`),
+        (view.style.color = `white`)
+      );
     }
     localStorage.setItem(`mode`, `light`);
-    if (location.pathname === `/index.html`) {
-      body.style.background = `white`;
-      mobile.style.background = `white`;
+    mainbody.style.background = `white`;
+    mobileMenu.style.background = `white`;
+    mobileMenuCon.forEach((each) => {
+      each.firstElementChild.style.color = `black`;
+      each.lastElementChild.style.color = `black`;
+      each.addEventListener(`mouseover`, function (e) {
+        each.firstElementChild.style.color = `rgb(191, 10, 182)`;
+        each.lastElementChild.style.color = `rgb(191, 10, 182)`;
+      });
+      each.addEventListener(`mouseout`, function () {
+        each.firstElementChild.style.color = `black`;
+        each.lastElementChild.style.color = `black`;
+      });
+    });
+    if (location.pathname === `/`) {
       h1.forEach((each) => {
         each.style.color = `black`;
       });
@@ -154,7 +214,11 @@ lightToggle.forEach((each) => {
       });
     }
     if (window.innerWidth < 601) {
-      return (each.firstElementChild.innerText = `toggle_on`);
+      return (
+        (each.firstElementChild.innerText = `toggle_on`),
+        (each.firstElementChild.style.color = `black`),
+        (view.style.color = `black`)
+      );
     }
     each.firstElementChild.innerText = `toggle_on`;
     each.lastElementChild.innerText = `On`;

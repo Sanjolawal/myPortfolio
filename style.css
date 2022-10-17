@@ -58,7 +58,7 @@ body {
     align-items: center;
     column-gap: 0.7vw;
     width: 70%;
-    padding: 1vh;
+    padding: 1vh 0.5vw 1vh 0.5vw;
   }
   .menusCon:nth-child(9) {
     margin: 2vh 0 0 0;
@@ -221,7 +221,7 @@ body {
     padding: 0 0vw 0 1.3vw;
   }
   .menusCon {
-    padding: 1vh;
+    padding: 1vh 0vw 1vh 1.3vw;
   }
   .menusCon:hover {
     margin-left: 0;
@@ -241,6 +241,12 @@ body {
   .home .p2,
   .home .p {
     margin: 1vh 0 0 0;
+  }
+}
+
+@media all and (min-width: 750px) and (orientation: portrait) {
+  .menusCon {
+    padding: 0.6vh 0vw 0.6vh 1.3vw;
   }
 }
 

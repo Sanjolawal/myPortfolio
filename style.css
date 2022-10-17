@@ -22,6 +22,10 @@ body {
     grid-template-columns: repeat(2, 15% 85%);
     padding: 0 15% 0 15%;
   }
+  a {
+    color: transparent;
+    text-decoration: none;
+  }
   nav {
     display: grid;
     background: linear-gradient(to top, rgb(191, 10, 182), rgb(120, 10, 180));
@@ -52,9 +56,9 @@ body {
   .menusCon {
     display: flex;
     align-items: center;
-    padding: 0 0.5vw 0 0.5vw;
     column-gap: 0.7vw;
     width: 70%;
+    padding: 1vh;
   }
   .menusCon:nth-child(9) {
     margin: 2vh 0 0 0;
@@ -95,7 +99,7 @@ body {
     font-weight: 700;
   }
   .menuIllus2 {
-    font-size: clamp(14px, 1.2vw, 1.3vw);
+    /* font-size: clamp(14px, 1.2vw, 1.3vw); */
     visibility: visible;
   }
   .home {
@@ -217,7 +221,7 @@ body {
     padding: 0 0vw 0 1.3vw;
   }
   .menusCon {
-    padding: 0 0vw 0 1.3vw;
+    padding: 1vh;
   }
   .menusCon:hover {
     margin-left: 0;
@@ -402,7 +406,9 @@ body {
     width: 90%;
     grid-template-columns: repeat(3, 30%);
     column-gap: 3.33vw;
-    row-gap: 3.5vh;
+    row-gap: 5.5vh;
+    /* background: red; */
+    padding-bottom: 4vh;
   }
   .mobileMenuCon {
     display: grid;

@@ -16,6 +16,13 @@ const p2 = document.querySelectorAll(`.p2`);
 const profileImg = document.querySelector(`.profileImg`);
 const mobileProfile = document.querySelector(`.mobileProfile`);
 
+// Animations for nav on desktop with gsap library
+gsap.from(`.menuContainer`, {
+  duration: 1,
+  y: 350,
+  opacity: 0,
+});
+
 // script for checking for menus hovering width for all devices
 if (window.innerWidth > 1101) {
   menus.style.width = `${2.6}vw`;
@@ -44,6 +51,24 @@ if (!localStorage.length || localStorage.getItem(`mode`) === `light`) {
   });
 
   if (location.pathname === `/`) {
+    gsap.from(`.mobileArticle, .mobileFirst`, {
+      duration: 1.5,
+      y: -350,
+      opacity: 0,
+    });
+
+    gsap.from(`.profileImg`, {
+      duration: 1,
+      x: 150,
+      opacity: 0,
+    });
+
+    gsap.from(`.homeSecond`, {
+      duration: 1,
+      x: -150,
+      opacity: 0,
+    });
+
     h1.forEach((each) => {
       each.style.color = `black`;
     });
@@ -81,6 +106,24 @@ if (!localStorage.length || localStorage.getItem(`mode`) === `light`) {
     });
   });
   if (location.pathname === `/`) {
+    gsap.from(`.mobileArticle, .mobileFirst`, {
+      duration: 1.5,
+      y: -350,
+      opacity: 0,
+    });
+
+    gsap.from(`.profileImg`, {
+      duration: 1,
+      x: 150,
+      opacity: 0,
+    });
+
+    gsap.from(`.homeSecond`, {
+      duration: 1,
+      x: -150,
+      opacity: 0,
+    });
+
     profileImg.style.background = `white`;
     mobileProfile.style.background = `white`;
     h1.forEach((each) => {
@@ -102,8 +145,8 @@ if (!localStorage.length || localStorage.getItem(`mode`) === `light`) {
     }
     return (
       (each.firstElementChild.firstElementChild.innerText = `toggle_off`),
-      (each.firstElementChild.firstElementChild.style.color = `white`),
-      (view.style.color = `white`)
+      (view.style.color = `white`),
+      (each.firstElementChild.firstElementChild.style.color = `white`)
     );
   });
 }
@@ -229,8 +272,14 @@ lightToggle.forEach((each) => {
 // script for opening and closing menus on mobiles
 view.addEventListener(`click`, () => {
   mobileMenu.style.display = `grid`;
+  gsap.from(`.mobileMenu`, {
+    duration: 0.6,
+    y: 400,
+  });
 });
 
 mobileClose.addEventListener(`click`, () => {
   mobileMenu.style.display = `none`;
 });
+
+

@@ -1,0 +1,27 @@
+@media all and (max-width: 2500px) {
+  .expertise .h1 {
+    font: clamp(22px, 1.5vw, 1.6vw) montserrat;
+    margin: 5vh 0 0vh 2vw;
+  }
+  .expertise .span1 {
+    color: black;
+    font: clamp(13px, 1vw, 1.1vw) roboto slab;
+    font-weight: 300;
+    margin: 0vh 0 0vh 2vw;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .mainExpertise {
+    width: 90vw;
+  }
+  .mainExpertise2 {
+    width: 77vw;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .mainExpertise {
+    width: 96.5vw;
+  }
+}

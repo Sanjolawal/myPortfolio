@@ -50,7 +50,7 @@ body {
   .menus {
     display: flex;
     flex-direction: column;
-    row-gap: 1.7vh;
+    row-gap: 2.7vh;
     width: 100%;
   }
   .menusCon {
@@ -60,7 +60,7 @@ body {
     width: 70%;
     padding: 1vh 0.5vw 1vh 0.5vw;
   }
-  .menusCon:nth-child(9) {
+  .menusCon:nth-child(8) {
     margin: 2vh 0 0 0;
   }
 
@@ -376,6 +376,8 @@ body {
     padding: 0 5vw 0 3vw;
     width: 92%;
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
+    background: white;
+    z-index: 100;
   }
   .nav .h1 {
     font: 21px roboto slab;

@@ -3,6 +3,7 @@ const menusCon = document.querySelectorAll(`.menusCon`);
 const menuOpener = document.querySelector(`#menuOpener`);
 const body = document.querySelector(`.body`);
 const mainbody = document.querySelector(`.mainBody`);
+const nav = document.querySelector(`.nav`);
 const menuIllus = document.querySelectorAll(`.menuIllus`);
 const lightToggle = document.querySelectorAll(`#lightToggle`);
 const toggleValue = document.querySelector(`#toggleValue`);
@@ -38,6 +39,7 @@ if (window.innerWidth < 821) {
 if (!localStorage.length || localStorage.getItem(`mode`) === `light`) {
   mainbody.style.background = `white`;
   mobileMenu.style.background = `white`;
+  nav.style.background = `white`;
   mobileMenuCon.forEach((each) => {
     each.lastElementChild.style.color = `black`;
     each.addEventListener(`mouseover`, function (e) {
@@ -91,8 +93,9 @@ if (!localStorage.length || localStorage.getItem(`mode`) === `light`) {
     each.lastElementChild.innerText = `On`;
   });
 } else if (localStorage.getItem(`mode`) === `dark`) {
-  mainbody.style.background = `rgb(0,0,0,0.8)`;
+  mainbody.style.background = `rgb(51, 40, 51)`;
   mobileMenu.style.background = `black`;
+  nav.style.background = `rgb(51, 40, 51)`;
   mobileMenuCon.forEach((each) => {
     each.firstElementChild.firstElementChild.style.color = `white`;
     each.lastElementChild.style.color = `white`;
@@ -192,8 +195,9 @@ lightToggle.forEach((each) => {
   each.addEventListener(`click`, () => {
     if (each.firstElementChild.firstElementChild.innerText === `toggle_on`) {
       localStorage.setItem(`mode`, `dark`);
-      mainbody.style.background = `rgb(0,0,0,0.8)`;
+      mainbody.style.background = `rgb(51, 40, 51)`;
       mobileMenu.style.background = `black`;
+      nav.style.background = `rgb(51, 40, 51)`;
       mobileMenuCon.forEach((each) => {
         each.firstElementChild.firstElementChild.style.color = `white`;
         each.lastElementChild.style.color = `white`;
@@ -234,6 +238,7 @@ lightToggle.forEach((each) => {
     localStorage.setItem(`mode`, `light`);
     mainbody.style.background = `white`;
     mobileMenu.style.background = `white`;
+    nav.style.background = `white`;
     mobileMenuCon.forEach((each) => {
       each.firstElementChild.firstElementChild.style.color = `black`;
       each.lastElementChild.style.color = `black`;
@@ -281,5 +286,3 @@ view.addEventListener(`click`, () => {
 mobileClose.addEventListener(`click`, () => {
   mobileMenu.style.display = `none`;
 });
-
-

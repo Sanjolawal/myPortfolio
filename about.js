@@ -1,5 +1,11 @@
 const sImages = document.querySelector(`.sImages`);
 const tImages = document.querySelector(`.tImages`);
+const img = document.querySelector(`.Img`);
+const span1 = document.querySelectorAll(`.span1`);
+const infoH1 = document.querySelectorAll(`.infoH1`);
+const infoP = document.querySelectorAll(`.infoP`);
+const h2 = document.querySelectorAll(`.h2`);
+const aboutArticle = document.querySelector(`.aboutArticle`);
 
 if (window.innerWidth < 751) {
   menuOpener.addEventListener(`click`, function () {
@@ -8,6 +14,80 @@ if (window.innerWidth < 751) {
   });
 }
 
+lightToggle.forEach((each) => {
+  if (each.firstElementChild.firstElementChild.innerText === `toggle_off`) {
+    aboutArticle.style.color = `white`;
+    span1.forEach((each) => {
+      each.style.color = `white`;
+    });
+    img.style.background = `white`;
+    h2.forEach((h2) => {
+      h2.style.color = `white`;
+    });
+    sImages.style.color = `white`;
+    tImages.style.color = `white`;
+    each.addEventListener(`click`, () => {
+      if (each.firstElementChild.firstElementChild.innerText === `toggle_off`) {
+        aboutArticle.style.color = `white`;
+        span1.forEach((each) => {
+          each.style.color = `white`;
+        });
+        img.style.background = `white`;
+        h2.forEach((h2) => {
+          h2.style.color = `white`;
+        });
+        sImages.style.color = `white`;
+        tImages.style.color = `white`;
+      } else {
+        aboutArticle.style.color = `black`;
+        span1.forEach((each) => {
+          each.style.color = `black`;
+        });
+        img.style.background = `white`;
+        h2.forEach((h2) => {
+          h2.style.color = `black`;
+        });
+        sImages.style.color = `black`;
+        tImages.style.color = `black`;
+      }
+    });
+  } else {
+    aboutArticle.style.color = `black`;
+    img.style.background = `white`;
+    h2.forEach((h2) => {
+      h2.style.color = `black`;
+    });
+    sImages.style.color = `black`;
+    tImages.style.color = `black`;
+    each.addEventListener(`click`, () => {
+      if (each.firstElementChild.firstElementChild.innerText === `toggle_on`) {
+        aboutArticle.style.color = `black`;
+        span1.forEach((each) => {
+          each.style.color = `black`;
+        });
+        img.style.background = `white`;
+        h2.forEach((h2) => {
+          h2.style.color = `black`;
+        });
+        sImages.style.color = `black`;
+        tImages.style.color = `black`;
+      } else {
+        aboutArticle.style.color = `white`;
+        span1.forEach((each) => {
+          each.style.color = `white`;
+        });
+        img.style.background = `white`;
+        h2.forEach((h2) => {
+          h2.style.color = `white`;
+        });
+        sImages.style.color = `white`;
+        tImages.style.color = `white`;
+      }
+    });
+  }
+});
+
+// programming languages script link
 let pl = [
   {
     src: `html.png`,
@@ -48,22 +128,31 @@ let pl = [
 ];
 
 const newPl = pl.map((each) => {
+  if (aboutArticle.style.color === `black`) {
+    return `  <div class="imageContainer">
+                    <img src="images/${each.src}" alt="logo" class="sLogo" />
+                    <p class="imageP">${each.text.toUpperCase()}</p>
+                  </div>`;
+  }
   return `  <div class="imageContainer">
-                  <img src="images/${each.src}" alt="logo" class="sLogo" />
-                  <p class="imageP">${each.text.toUpperCase()}</p>
-                </div>`;
+                    <img src="images/${
+                      each.src
+                    }" alt="logo" class="sLogo" style="background: black" />
+                    <p class="imageP">${each.text.toUpperCase()}</p>
+                  </div>`;
 });
 
 sImages.innerHTML = newPl.join(` `);
 
+// My tools script link
 let tl = [
   {
     src: `figma.png`,
     text: `figma`,
   },
   {
-    src: `canva.png`,
-    text: `canva`,
+    src: `vs code.png`,
+    text: `vs code`,
   },
   {
     src: `git.png`,
@@ -86,8 +175,8 @@ let tl = [
     text: `netlify`,
   },
   {
-    src: `vs code.png`,
-    text: `vs code`,
+    src: `canva.png`,
+    text: `canva`,
   },
   {
     src: `xd.png`,
@@ -96,10 +185,18 @@ let tl = [
 ];
 
 const newTl = tl.map((each) => {
+  if (aboutArticle.style.color === `black`) {
+    return `  <div class="imageContainer">
+                    <img src="images/${each.src}" alt="logo" class="sLogo" />
+                    <p class="imageP">${each.text.toUpperCase()}</p>
+                  </div>`;
+  }
   return `  <div class="imageContainer">
-                  <img src="images/${each.src}" alt="logo" class="sLogo" />
-                  <p class="imageP">${each.text.toUpperCase()}</p>
-                </div>`;
+                    <img src="images/${
+                      each.src
+                    }" alt="logo" class="sLogo" style="background: black" />
+                    <p class="imageP">${each.text.toUpperCase()}</p>
+                  </div>`;
 });
 
 tImages.innerHTML = newTl.join(` `);

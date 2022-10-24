@@ -62,8 +62,8 @@ let tl = [
     text: `figma`,
   },
   {
-    src: `canva.png`,
-    text: `canva`,
+    src: `vs code.png`,
+    text: `vs code`,
   },
   {
     src: `git.png`,
@@ -86,8 +86,8 @@ let tl = [
     text: `netlify`,
   },
   {
-    src: `vs code.png`,
-    text: `vs code`,
+    src: `canva.png`,
+    text: `canva`,
   },
   {
     src: `xd.png`,

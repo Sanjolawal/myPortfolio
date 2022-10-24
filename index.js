@@ -51,7 +51,9 @@ if (!localStorage.length || localStorage.getItem(`mode`) === `light`) {
       each.lastElementChild.style.color = `black`;
     });
   });
-
+  h1.forEach((each) => {
+    each.style.color = `black`;
+  });
   if (location.pathname === `/`) {
     gsap.from(`.mobileArticle, .mobileFirst`, {
       duration: 1.5,
@@ -71,9 +73,6 @@ if (!localStorage.length || localStorage.getItem(`mode`) === `light`) {
       opacity: 0,
     });
 
-    h1.forEach((each) => {
-      each.style.color = `black`;
-    });
     p.forEach((each) => {
       each.style.color = `black`;
     });
@@ -108,6 +107,9 @@ if (!localStorage.length || localStorage.getItem(`mode`) === `light`) {
       each.lastElementChild.style.color = `white`;
     });
   });
+  h1.forEach((each) => {
+    each.style.color = `white`;
+  });
   if (location.pathname === `/`) {
     gsap.from(`.mobileArticle, .mobileFirst`, {
       duration: 1.5,
@@ -129,9 +131,7 @@ if (!localStorage.length || localStorage.getItem(`mode`) === `light`) {
 
     profileImg.style.background = `white`;
     mobileProfile.style.background = `white`;
-    h1.forEach((each) => {
-      each.style.color = `white`;
-    });
+
     p.forEach((each) => {
       each.style.color = `white`;
     });
@@ -210,12 +210,13 @@ lightToggle.forEach((each) => {
           each.lastElementChild.style.color = `white`;
         });
       });
+      h1.forEach((each) => {
+        each.style.color = `white`;
+      });
       if (location.pathname === `/`) {
         profileImg.style.background = `white`;
         mobileProfile.style.background = `white`;
-        h1.forEach((each) => {
-          each.style.color = `white`;
-        });
+
         p.forEach((each) => {
           each.style.color = `white`;
         });
@@ -251,10 +252,10 @@ lightToggle.forEach((each) => {
         each.lastElementChild.style.color = `black`;
       });
     });
+    h1.forEach((each) => {
+      each.style.color = `black`;
+    });
     if (location.pathname === `/`) {
-      h1.forEach((each) => {
-        each.style.color = `black`;
-      });
       p.forEach((each) => {
         each.style.color = `black`;
       });

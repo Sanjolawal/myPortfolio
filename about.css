@@ -394,11 +394,14 @@
     padding: 2vh 4vw 2vh 4vw;
     margin: 2.5vh 0 0 0;
   }
+  .expertise {
+    margin: 0 0 8vh 0;
+  }
   .expertise .container {
     grid-template-columns: repeat(1, 94%);
     row-gap: 5vh;
     width: 89%;
-    margin: 4vh 4% 0 7%;
+    margin: 3vh 4% 0 7%;
   }
   .expertise .sImages,
   .expertise .tImages {
@@ -410,6 +413,10 @@
   .swiper {
     width: 90%;
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.05);
+    margin: 2.5vh 0 8vh 0;
+  }
+  .service .container {
+    margin: 4vh 10% 8vh 10%;
   }
 }
 @media all and (max-width: 600px) {

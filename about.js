@@ -6,6 +6,10 @@ const infoH1 = document.querySelectorAll(`.infoH1`);
 const infoP = document.querySelectorAll(`.infoP`);
 const h2 = document.querySelectorAll(`.h2`);
 const aboutArticle = document.querySelector(`.aboutArticle`);
+const reviewArticle = document.querySelectorAll(`.reviewArticle`);
+const reviewP = document.querySelectorAll(`.reviewP`);
+const cp = document.querySelector(`.cp`);
+const contact = document.querySelector(`.contact`);
 
 if (window.innerWidth < 751) {
   menuOpener.addEventListener(`click`, function () {
@@ -26,6 +30,14 @@ lightToggle.forEach((each) => {
     });
     sImages.style.color = `white`;
     tImages.style.color = `white`;
+    contact.style.color = `white`;
+    cp.style.color = `white`;
+    reviewArticle.forEach((each) => {
+      each.style.color = `white`;
+    });
+    reviewP.forEach((each) => {
+      each.style.color = `white`;
+    });
     each.addEventListener(`click`, () => {
       if (each.firstElementChild.firstElementChild.innerText === `toggle_off`) {
         aboutArticle.style.color = `white`;
@@ -38,6 +50,14 @@ lightToggle.forEach((each) => {
         });
         sImages.style.color = `white`;
         tImages.style.color = `white`;
+        contact.style.color = `white`;
+        cp.style.color = `white`;
+        reviewArticle.forEach((each) => {
+          each.style.color = `white`;
+        });
+        reviewP.forEach((each) => {
+          each.style.color = `white`;
+        });
       } else {
         aboutArticle.style.color = `black`;
         span1.forEach((each) => {
@@ -49,6 +69,14 @@ lightToggle.forEach((each) => {
         });
         sImages.style.color = `black`;
         tImages.style.color = `black`;
+        contact.style.color = `black`;
+        cp.style.color = `black`;
+        reviewArticle.forEach((each) => {
+          each.style.color = `black`;
+        });
+        reviewP.forEach((each) => {
+          each.style.color = `black`;
+        });
       }
     });
   } else {
@@ -59,6 +87,15 @@ lightToggle.forEach((each) => {
     });
     sImages.style.color = `black`;
     tImages.style.color = `black`;
+    contact.style.color = `black`;
+    cp.style.color = `black`;
+    reviewArticle.forEach((each) => {
+      each.style.color = `black`;
+    });
+    reviewP.forEach((each) => {
+      each.style.color = `black`;
+    });
+
     each.addEventListener(`click`, () => {
       if (each.firstElementChild.firstElementChild.innerText === `toggle_on`) {
         aboutArticle.style.color = `black`;
@@ -71,6 +108,14 @@ lightToggle.forEach((each) => {
         });
         sImages.style.color = `black`;
         tImages.style.color = `black`;
+        contact.style.color = `black`;
+        cp.style.color = `black`;
+        reviewArticle.forEach((each) => {
+          each.style.color = `black`;
+        });
+        reviewP.forEach((each) => {
+          each.style.color = `black`;
+        });
       } else {
         aboutArticle.style.color = `white`;
         span1.forEach((each) => {
@@ -82,6 +127,14 @@ lightToggle.forEach((each) => {
         });
         sImages.style.color = `white`;
         tImages.style.color = `white`;
+        contact.style.color = `white`;
+        cp.style.color = `white`;
+        reviewArticle.forEach((each) => {
+          each.style.color = `white`;
+        });
+        reviewP.forEach((each) => {
+          each.style.color = `white`;
+        });
       }
     });
   }
@@ -141,7 +194,6 @@ const newPl = pl.map((each) => {
                     <p class="imageP">${each.text.toUpperCase()}</p>
                   </div>`;
 });
-
 sImages.innerHTML = newPl.join(` `);
 
 // My tools script link
@@ -200,3 +252,25 @@ const newTl = tl.map((each) => {
 });
 
 tImages.innerHTML = newTl.join(` `);
+
+// Animations
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.from(`.Div`, {
+  duration: 2,
+  y: -200,
+  opacity: 0,
+});
+gsap.from(`.contact`, {
+  scrollTrigger: `.contact`,
+  duration: 1,
+  y: 150,
+  opacity: 0,
+});
+gsap.from(`.one`, {
+  scrollTrigger: `.one`,
+  duration: 1,
+  y: 150,
+  opacity: 0,
+  stagger: 0.5,
+});

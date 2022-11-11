@@ -1,0 +1,56 @@
+@media all and (max-width: 2500px) {
+  .project {
+    color: black;
+  }
+  .project .h1 {
+    font: clamp(22px, 1.5vw, 1.6vw) montserrat;
+    margin: 5vh 0 0vh 2vw;
+  }
+  .project .span1 {
+    font: clamp(13px, 1vw, 1.1vw) roboto slab;
+    font-weight: 300;
+    margin: 0vh 0 0vh 2vw;
+  }
+  .container {
+    background: rgb(246, 243, 237, 1);
+    width: 26vw;
+    display: grid;
+    justify-items: center;
+    text-align: start;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
+    margin: 0 0 0 2vw;
+    border-radius: 35px;
+    padding: 3vh 2vw 0 2vw;
+    /* padding: 0vh; */
+  }
+  .Img2 {
+      width: 100%;
+    width: 80%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    /* margin: 8vh 2vw 2vw 2vw; */
+
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.5);
+  }
+  .Img2:hover {
+    opacity: 0;
+  }
+  .container:hover {
+    background: rgb(191, 10, 182, 0.7);
+  }
+}
+
+@media all and (max-width: 750px) {
+  .mainProject {
+    width: 90vw;
+  }
+  .mainProject2 {
+    width: 77vw;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .mainProject {
+    width: 96.5vw;
+  }
+}

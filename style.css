@@ -4,180 +4,178 @@ body {
   background: white;
 }
 
-@media all and (max-width: 2500px) {
-  ::-webkit-scrollbar {
-    background: rgb(0, 0, 0, 0.6);
-  }
-  ::-webkit-scrollbar-thumb {
-    background: rgb(191, 10, 182);
-    border-radius: 30px;
-  }
-  .body {
-    display: grid;
-    grid-template-columns: repeat(1, 6% 95%);
-    padding: 0 20% 0 20%;
-  }
-  .body2 {
-    display: grid;
-    grid-template-columns: repeat(1, 15% 85%);
-    padding: 0 15% 0 15%;
-  }
-  a {
-    color: transparent;
-    text-decoration: none;
-  }
-  nav {
-    display: grid;
-    background: linear-gradient(to top, rgb(191, 10, 182), rgb(120, 10, 180));
-    align-items: center;
-    box-shadow: 0 0 20px rgb(0, 0, 0, 0.6);
-    border-radius: 30px;
-    margin: 1.5vh 0 1.5vh 0;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 1vh;
-    height: 98vh;
-  }
+::-webkit-scrollbar {
+  background: rgb(0, 0, 0, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(191, 10, 182);
+  border-radius: 30px;
+}
+.body {
+  display: grid;
+  grid-template-columns: repeat(1, 6% 95%);
+  padding: 0 20% 0 20%;
+}
+.body2 {
+  display: grid;
+  grid-template-columns: repeat(1, 15% 85%);
+  padding: 0 15% 0 15%;
+}
+a {
+  color: transparent;
+  text-decoration: none;
+}
+nav {
+  display: grid;
+  background: linear-gradient(to top, rgb(191, 10, 182), rgb(120, 10, 180));
+  align-items: center;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.6);
+  border-radius: 30px;
+  margin: 1.5vh 0 1.5vh 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1vh;
+  height: 98vh;
+}
 
-  .logoCon {
-    display: flex;
-    align-items: center;
-    margin: 0 0 5vh 0;
-    padding: 0 0.5vw 0 0.5vw;
-    column-gap: 0.7vw;
-  }
+.logoCon {
+  display: flex;
+  align-items: center;
+  margin: 0 0 5vh 0;
+  padding: 0 0.5vw 0 0.5vw;
+  column-gap: 0.7vw;
+}
 
-  .menus {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2.7vh;
-    width: 100%;
-  }
-  .menusCon {
-    display: flex;
-    align-items: center;
-    column-gap: 0.7vw;
-    width: 70%;
-    padding: 1vh 0.5vw 1vh 0.5vw;
-  }
-  .menusCon:nth-child(8) {
-    margin: 2vh 0 0 0;
-  }
+.menus {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.7vh;
+  width: 100%;
+}
+.menusCon {
+  display: flex;
+  align-items: center;
+  column-gap: 0.7vw;
+  width: 70%;
+  padding: 1vh 0.5vw 1vh 0.5vw;
+}
+.menusCon:nth-child(8) {
+  margin: 2vh 0 0 0;
+}
 
-  .menusCon:hover {
-    background: rgb(191, 10, 182);
-    background: white;
-    cursor: pointer;
-    border-bottom-left-radius: 30px;
-    border-top-left-radius: 30px;
-    margin-left: 0.2vw;
-  }
+.menusCon:hover {
+  background: rgb(191, 10, 182);
+  background: white;
+  cursor: pointer;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  margin-left: 0.2vw;
+}
 
-  .menusConActive {
-    display: flex;
-    align-items: center;
-    padding: 0 0.5vw 0 0.5vw;
-    column-gap: 0.7vw;
-    background: purple;
-    cursor: pointer;
-    border-bottom-left-radius: 38%;
-    border-top-left-radius: 38%;
-    margin-left: 0.2vw;
-  }
-  .material-symbols-outlined,
-  .menuIllus {
-    font-size: clamp(24px, 2vw, 2.1vw);
-    color: white;
-  }
-  .menuIllus {
-    font-size: clamp(14px, 1.2vw, 1.3vw);
-    font-weight: 500;
-    visibility: hidden;
-  }
-  .logoCon .menuIllus {
-    font-size: clamp(14px, 1.2vw, 1.3vw);
-    font-weight: 700;
-  }
-  .menuIllus2 {
-    visibility: visible;
-  }
-  .home {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(1, 36% 50%);
-    background: transparent;
-    column-gap: 4vw;
-    padding: 0 2% 0 2%;
-  }
-  .profileImg {
-    width: 100%;
-    border-radius: 5%;
-    box-shadow: 0 0 20px rgb(0, 0, 0, 0.1);
-    object-fit: cover;
-  }
-  .profileImg:hover {
-    box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
-    margin: 1vh 0 0 0;
-  }
-  .homeSecond {
-    display: flex;
-    align-items: center;
-    column-gap: 1.5vw;
-  }
-  .homeIcon .material-symbols-outlined {
-    display: flex;
-    flex-direction: column;
-    height: 4.5vh;
-    color: rgb(191, 10, 182);
-    cursor: pointer;
-  }
-  .homeIcon .material-symbols-outlined:hover {
-    color: black;
-  }
+.menusConActive {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5vw 0 0.5vw;
+  column-gap: 0.7vw;
+  background: purple;
+  cursor: pointer;
+  border-bottom-left-radius: 38%;
+  border-top-left-radius: 38%;
+  margin-left: 0.2vw;
+}
+.material-symbols-outlined,
+.menuIllus {
+  font-size: clamp(24px, 2vw, 2.1vw);
+  color: white;
+}
+.menuIllus {
+  font-size: clamp(14px, 1.2vw, 1.3vw);
+  font-weight: 500;
+  visibility: hidden;
+}
+.logoCon .menuIllus {
+  font-size: clamp(14px, 1.2vw, 1.3vw);
+  font-weight: 700;
+}
+.menuIllus2 {
+  visibility: visible;
+}
+.home {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(1, 36% 50%);
+  background: transparent;
+  column-gap: 4vw;
+  padding: 0 2% 0 2%;
+}
+.profileImg {
+  width: 100%;
+  border-radius: 5%;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+.profileImg:hover {
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
+  margin: 1vh 0 0 0;
+}
+.homeSecond {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5vw;
+}
+.homeIcon .material-symbols-outlined {
+  display: flex;
+  flex-direction: column;
+  height: 4.5vh;
+  color: rgb(191, 10, 182);
+  cursor: pointer;
+}
+.homeIcon .material-symbols-outlined:hover {
+  color: black;
+}
 
-  .home .h1 {
-    font: clamp(30px, 2.9vw, 3vw) montserrat;
-    font-weight: 600;
-    margin: 0;
-  }
-  .home .p {
-    font: clamp(18px, 1.6vw, 1.65vw) roboto Slab;
-    font-weight: 500;
-    margin: 1vh 0 0 0;
-    color: rgb(0, 0, 0, 0.7);
-  }
-  .home .p2 {
-    font: clamp(15px, 1.2vw, 1.25vw) roboto Slab;
-    font-weight: 600;
-    margin: 1vh 0 0 0;
-    color: white;
-    width: fit-content;
-    padding: 1vh 2vw 1vh 2vw;
-    border-radius: 8px;
-    background: rgb(191, 10, 182);
-  }
-  .home .Btn {
-    font: clamp(18px, 1.6vw, 1.6vw) roboto slab;
-    color: white;
-    background: linear-gradient(to left, rgb(191, 10, 182), rgb(100, 10, 170));
-    text-align: center;
-    border: none;
-    border-radius: 10px;
-    padding: 1.5vh 1.5vw 1.5vh 1.5vw;
-    margin: 2vh 0 0 0;
-    display: flex;
-    align-items: center;
-    column-gap: 0.5vw;
-  }
-  .home .Btn:hover {
-    background: linear-gradient(to right, rgb(191, 10, 182), rgb(100, 10, 170));
-    color: rgb(255, 255, 255, 0.6);
-    cursor: pointer;
-  }
-  .mobile {
-    display: none;
-  }
+.home .h1 {
+  font: clamp(30px, 2.9vw, 3vw) montserrat;
+  font-weight: 600;
+  margin: 0;
+}
+.home .p {
+  font: clamp(18px, 1.6vw, 1.65vw) roboto Slab;
+  font-weight: 500;
+  margin: 1vh 0 0 0;
+  color: rgb(0, 0, 0, 0.7);
+}
+.home .p2 {
+  font: clamp(15px, 1.2vw, 1.25vw) roboto Slab;
+  font-weight: 600;
+  margin: 1vh 0 0 0;
+  color: white;
+  width: fit-content;
+  padding: 1vh 2vw 1vh 2vw;
+  border-radius: 8px;
+  background: rgb(191, 10, 182);
+}
+.home .Btn {
+  font: clamp(18px, 1.6vw, 1.6vw) roboto slab;
+  color: white;
+  background: linear-gradient(to left, rgb(191, 10, 182), rgb(100, 10, 170));
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+  margin: 2vh 0 0 0;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5vw;
+}
+.home .Btn:hover {
+  background: linear-gradient(to right, rgb(191, 10, 182), rgb(100, 10, 170));
+  color: rgb(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.mobile {
+  display: none;
 }
 @media all and (max-width: 2000px) {
   .body {

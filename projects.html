@@ -14,7 +14,13 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;600&family=Montserrat:wght@600&display=swap"
       rel="stylesheet"
     />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="about.css" />
     <link rel="stylesheet" type="text/css" href="projects.css" />
     <title>OluwaSanjo | Projects</title>
   </head>
@@ -87,6 +93,16 @@
           </span>
         </div>
         <div class="container"></div>
+
+        <div class="contact">
+          <h1 class="h5">NOTICE</h1>
+          <p class="cp">
+            Do you have an insane idea , not sure if it is possible to
+            implement, or in dire need of a qualified developer for a quick bug
+            fix on your site?
+          </p>
+          <a href="contact.html" class="cbtn">Let's talk</a>
+        </div>
       </div>
     </div>
 
@@ -174,5 +190,40 @@
     <!-- my external script -->
     <script src="index.js"></script>
     <script src="projects.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        centeredSlides: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        grabCursor: true,
+        centeredSlides: true,
+        breakpoints: {
+          750: {
+            slidesPerView: 1.2,
+            spaceBetween: 10,
+          },
+          1100: {
+            slidesPerView: 1.4,
+            spaceBetween: 10,
+          },
+          1280: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+        },
+        slidesPerView: 1,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>

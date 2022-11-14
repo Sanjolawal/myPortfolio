@@ -1,0 +1,66 @@
+.blog {
+  color: black;
+}
+.blog .h1 {
+  font: clamp(22px, 1.5vw, 1.6vw) montserrat;
+  margin: 5vh 0 0vh 2vw;
+}
+.blog .span1 {
+  font: clamp(13px, 1vw, 1.1vw) roboto slab;
+  font-weight: 300;
+  margin: 0vh 0 0vh 2vw;
+}
+.container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 48%);
+  width: 70%;
+  column-gap: 3%;
+  row-gap: 36px;
+  justify-items: center;
+  margin: 26px 15%;
+}
+
+.first .Img {
+  width: 100%;
+  border-radius: 15px;
+  padding: none;
+  margin: none;
+  cursor: pointer;
+}
+.first .h4 {
+  margin: 16px 0 7px 0;
+  font: 21px "DM Sans", sans-serif;
+  font-weight: 600;
+}
+.first .p3 {
+  margin: 0;
+  font: 14px "DM Sans", sans-serif;
+  color: rgb(0, 0, 0, 0.6);
+}
+
+@media all and (max-width: 1000px) {
+  .container {
+    width: 90%;
+    margin: 26px 5%;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .mainBlog {
+    width: 90vw;
+  }
+  .mainBlog2 {
+    width: 77vw;
+  }
+  .container {
+    grid-template-columns: repeat(1, 100%);
+    margin-bottom: 100px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .mainBlog {
+    width: 96.5vw;
+  }
+}

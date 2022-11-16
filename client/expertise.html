@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- Google material icons -->
     <link
       rel="stylesheet"
@@ -16,8 +15,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>OluwaSanjo | Home</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="about.css" />
+    <link rel="stylesheet" type="text/css" href="expertise.css" />
+    <title>My Skills | OluwaSanjo</title>
   </head>
   <body class="mainBody">
     <div class="body">
@@ -41,22 +41,22 @@
               <a href="about.html" class="menuIllus">About</a>
             </div>
             <div class="menusCon">
-              <a href="/expertise.html">
+              <a href="expertise.html">
                 <span class="material-symbols-outlined"> psychology </span>
               </a>
-              <a href="/expertise.html" class="menuIllus">Expertise</a>
+              <a href="expertise.html" class="menuIllus">Expertise</a>
             </div>
             <div class="menusCon">
-              <a href="/projects.html">
+              <a href="projects.html">
                 <span class="material-symbols-outlined"> work </span>
               </a>
-              <a href="/projects.html" class="menuIllus">Projects</a>
+              <a href="projects.html" class="menuIllus">Projects</a>
             </div>
             <div class="menusCon">
-              <a href="/blog.html">
+              <a href="blog.html">
                 <span class="material-symbols-outlined"> forum </span>
               </a>
-              <a href="/blog.html" class="menuIllus">Blog</a>
+              <a href="blog.html" class="menuIllus">Blog</a>
             </div>
             <div class="menusCon">
               <a href="contact.html">
@@ -79,90 +79,34 @@
           </div>
         </div>
       </nav>
-      <!--  homepage -->
-      <div class="home">
-        <img src="images/profile-2.png" alt="profile" class="profileImg" />
-        <div class="homeSecond">
-          <div class="homeIcon">
-            <a href="https://github.com/Sanjolawal">
-              <ion-icon
-                name="logo-github"
-                class="material-symbols-outlined"
-              ></ion-icon>
-            </a>
-            <a href="https://www.linkedin.com/in/sanjolawal/">
-              <ion-icon
-                name="logo-linkedin"
-                class="material-symbols-outlined"
-              ></ion-icon>
-            </a>
-            <a href="contact.html">
-              <ion-icon
-                name="mail-unread-outline"
-                class="material-symbols-outlined"
-              ></ion-icon>
-            </a>
+      <div class="mainExpertise">
+        <div class="expertise">
+          <h1 class="h1">Expertise</h1>
+          <span class="span1">Languages and Tools I use daily.</span>
+          <div class="container">
+            <div class="Pcontainer">
+              <h1 class="h2">My Programming Languages</h1>
+              <div class="sImages"></div>
+            </div>
+            <div class="Tcontainer">
+              <h1 class="h2">My Tools</h1>
+              <div class="tImages"></div>
+            </div>
           </div>
-          <div class="homeArticle">
-            <h1 class="h1">Hi, I'm Sanjo</h1>
-            <p class="p">Software Engineer</p>
-            <p class="p2">
-              " Web app developer in the day, Chrome extensions and Bots
-              automation programmer at night " - Friends.
-            </p>
-            <a href="about.html">
-              <button class="Btn">
-                More Info
-                <span class="material-symbols-outlined"> info </span>
-              </button>
-            </a>
-          </div>
+        </div>
+        <div class="contact">
+          <h1 class="h5">NOTICE</h1>
+          <p class="cp">
+            Do you have an insane idea , not sure if it is possible to
+            implement, or in dire need of a qualified developer for a quick bug
+            fix on your site?
+          </p>
+          <a href="contact.html" class="cbtn">Let's talk</a>
         </div>
       </div>
     </div>
 
-    <!-- Mobile nav and homepage  -->
-
     <div class="mobile">
-      <div class="mobileFirst">
-        <div class="mobileIcons">
-          <div class="mobileIcon">
-            <a target="_blank" href="https://github.com/Sanjolawal">
-              <ion-icon
-                name="logo-github"
-                class="material-symbols-outlined"
-              ></ion-icon>
-            </a>
-            <a target="_blank" href="https://www.linkedin.com/in/sanjolawal/">
-              <ion-icon
-                name="logo-linkedin"
-                class="material-symbols-outlined"
-              ></ion-icon>
-            </a>
-            <a target="_blank" href="contact.html">
-              <ion-icon
-                name="mail-unread-outline"
-                class="material-symbols-outlined"
-              ></ion-icon>
-            </a>
-          </div>
-        </div>
-        <img src="images/profile-2.png" alt="profile" class="mobileProfile" />
-      </div>
-      <div class="mobileArticle">
-        <h1 class="h1">Hi, I'm Sanjo</h1>
-        <p class="p">Software Engineer</p>
-        <p class="p2">
-          " Web app developer in the day, Chrome extensions and Bots automation
-          programmer at night " - Friends.
-        </p>
-        <a href="about.html">
-          <button class="Btn">
-            More Info <span class="material-symbols-outlined"> info </span>
-          </button>
-        </a>
-      </div>
-
       <!-- navbar mobile -->
       <div class="nav">
         <h1 class="h1">OluwaSanjo</h1>
@@ -171,6 +115,7 @@
             <p>
               <span class="material-symbols-outlined"> toggle_on </span>
             </p>
+            <a></a>
           </div>
           <p>
             <span class="material-symbols-outlined" id="view"> grid_view </span>
@@ -187,31 +132,31 @@
             <a href="/" class="mobileMinfo">Home</a>
           </div>
           <div class="mobileMenuCon">
-            <a href="/about.html">
+            <a href="about.html">
               <span class="material-symbols-outlined"> person </span>
             </a>
             <a href="about.html" class="mobileMinfo">About</a>
           </div>
           <div class="mobileMenuCon">
-            <a href="/expertise.html">
+            <a href="expertise.html">
               <span class="material-symbols-outlined"> psychology </span>
             </a>
             <a href="expertise.html" class="mobileMinfo">Expertise</a>
           </div>
           <div class="mobileMenuCon">
-            <a href="/projects.html">
+            <a href="projects.html">
               <span class="material-symbols-outlined"> work </span>
             </a>
             <a href="projects.html" class="mobileMinfo">Projects</a>
           </div>
           <div class="mobileMenuCon">
-            <a href="/blog.html">
+            <a href="blog.html">
               <span class="material-symbols-outlined"> forum </span>
             </a>
             <a href="blog.html" class="mobileMinfo">Blog</a>
           </div>
           <div class="mobileMenuCon">
-            <a href="/contact.html">
+            <a href="contact.html">
               <span class="material-symbols-outlined"> mail </span>
             </a>
             <a href="contact.html" class="mobileMinfo">Contact</a>
@@ -223,10 +168,10 @@
             <a class="mobileMinfo"></a>
           </div>
           <div class="mobileMenuCon">
-            <a href="/feats.html">
+            <a>
               <span class="material-symbols-outlined"> </span>
             </a>
-            <a href="feats.html" class="mobileMinfo"></a>
+            <a class="mobileMinfo"></a>
           </div>
           <div class="mobileMenuCon" id="mobileClose">
             <a>
@@ -245,5 +190,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <!-- my external script -->
     <script src="index.js"></script>
+    <script src="expertise.js"></script>
   </body>
 </html>

@@ -17,7 +17,7 @@ lightToggle.forEach((each) => {
     });
     each.addEventListener(`click`, () => {
       if (each.firstElementChild.firstElementChild.innerText === `toggle_off`) {
-        contact.style.background = `rgb(162,10,181, 0.6)`;
+        contact.style.background = `rgb(162,10,181, 0.45)`;
         p.forEach((each) => {
           each.style.color = `white`;
         });
@@ -40,7 +40,7 @@ lightToggle.forEach((each) => {
           each.style.color = `black`;
         });
       } else {
-        contact.style.background = `rgb(162,10,181, 0.6)`;
+        contact.style.background = `rgb(162,10,181, 0.45)`;
         p.forEach((each) => {
           each.style.color = `white`;
         });

@@ -14,10 +14,15 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;600&family=Montserrat:wght@600&display=swap"
       rel="stylesheet"
     />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="about.css" />
-    <link rel="stylesheet" type="text/css" href="expertise.css" />
-    <title>My Skills | OluwaSanjo</title>
+    <link rel="stylesheet" type="text/css" href="projects.css" />
+    <title>OluwaSanjo | Projects</title>
   </head>
   <body class="mainBody">
     <div class="body">
@@ -41,22 +46,22 @@
               <a href="about.html" class="menuIllus">About</a>
             </div>
             <div class="menusCon">
-              <a href="/expertise.html">
+              <a href="expertise.html">
                 <span class="material-symbols-outlined"> psychology </span>
               </a>
-              <a href="/expertise.html" class="menuIllus">Expertise</a>
+              <a href="expertise.html" class="menuIllus">Expertise</a>
             </div>
             <div class="menusCon">
-              <a href="/projects.html">
+              <a href="projects.html">
                 <span class="material-symbols-outlined"> work </span>
               </a>
-              <a href="/projects.html" class="menuIllus">Projects</a>
+              <a href="projects.html" class="menuIllus">Projects</a>
             </div>
             <div class="menusCon">
-              <a href="/blog.html">
+              <a href="blog.html">
                 <span class="material-symbols-outlined"> forum </span>
               </a>
-              <a href="/blog.html" class="menuIllus">Blog</a>
+              <a href="blog.html" class="menuIllus">Blog</a>
             </div>
             <div class="menusCon">
               <a href="contact.html">
@@ -79,29 +84,23 @@
           </div>
         </div>
       </nav>
-      <div class="mainExpertise">
-        <div class="expertise">
-          <h1 class="h1">Expertise</h1>
-          <span class="span1">Languages and Tools I use daily.</span>
-          <div class="container">
-            <div class="Pcontainer">
-              <h1 class="h2">My Programming Languages</h1>
-              <div class="sImages"></div>
-            </div>
-            <div class="Tcontainer">
-              <h1 class="h2">My Tools</h1>
-              <div class="tImages"></div>
-            </div>
-          </div>
+
+      <div class="mainProject">
+        <div class="project">
+          <h1 class="h1">Showcase</h1>
+          <span class="span1"
+            >Here are my portfolios both full stack and front end.
+          </span>
         </div>
+        <div class="container"></div>
+
         <div class="contact">
-          <h1 class="h5">NOTICE</h1>
+          <h1 class="h5">Unconvinced?</h1>
           <p class="cp">
-            Do you have an insane idea , not sure if it is possible to
-            implement, or in dire need of a qualified developer for a quick bug
-            fix on your site?
+            You probably don't like the samples shown or not tallying with your
+            project idea? kindly contact me for solution.
           </p>
-          <a href="contact.html" class="cbtn">Let's talk</a>
+          <a href="contact.html" class="cbtn">Contact</a>
         </div>
       </div>
     </div>
@@ -132,31 +131,31 @@
             <a href="/" class="mobileMinfo">Home</a>
           </div>
           <div class="mobileMenuCon">
-            <a href="/about.html">
+            <a href="about.html">
               <span class="material-symbols-outlined"> person </span>
             </a>
             <a href="about.html" class="mobileMinfo">About</a>
           </div>
           <div class="mobileMenuCon">
-            <a href="/expertise.html">
+            <a href="expertise.html">
               <span class="material-symbols-outlined"> psychology </span>
             </a>
             <a href="expertise.html" class="mobileMinfo">Expertise</a>
           </div>
           <div class="mobileMenuCon">
-            <a href="/projects.html">
+            <a href="projects.html">
               <span class="material-symbols-outlined"> work </span>
             </a>
             <a href="projects.html" class="mobileMinfo">Projects</a>
           </div>
           <div class="mobileMenuCon">
-            <a href="/blog.html">
+            <a href="blog.html">
               <span class="material-symbols-outlined"> forum </span>
             </a>
             <a href="blog.html" class="mobileMinfo">Blog</a>
           </div>
           <div class="mobileMenuCon">
-            <a href="/contact.html">
+            <a href="contact.html">
               <span class="material-symbols-outlined"> mail </span>
             </a>
             <a href="contact.html" class="mobileMinfo">Contact</a>
@@ -190,6 +189,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <!-- my external script -->
     <script src="index.js"></script>
-    <script src="expertise.js"></script>
+    <script src="projects.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        centeredSlides: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        grabCursor: true,
+        centeredSlides: true,
+        breakpoints: {
+          750: {
+            slidesPerView: 1.2,
+            spaceBetween: 10,
+          },
+          1100: {
+            slidesPerView: 1.4,
+            spaceBetween: 10,
+          },
+          1280: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+        },
+        slidesPerView: 1,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>

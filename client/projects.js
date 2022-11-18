@@ -58,45 +58,9 @@ lightToggle.forEach((each) => {
   }
 });
 
-function Change(color) {
-  proarr = [
-    {
-      img: `images/test.png`,
-      h4: `Premium Admin Template`,
-      p3: `
-     Premium coded admin panel, with animations, charts, secure login.
-              Has everything you can ever think of, aesthetic minimalist design,
-              stunning layout, premium font etc.`,
-    },
-    {
-      img: `images/test.png`,
-      h4: `Premium Admin Template`,
-      p3: `
-     Premium coded admin panel, with animations, charts, secure login.
-              Has everything you can ever think of, aesthetic minimalist design,
-              stunning layout, premium font etc.`,
-      github: `/`,
-      demo: `/`,
-    },
-    {
-      img: `images/test.png`,
-      h4: `Premium Admin Template`,
-      p3: `
-     Premium coded admin panel, with animations, charts, secure login.
-              Has everything you can ever think of, aesthetic minimalist design,
-              stunning layout, premium font etc.`,
-      github: `/`,
-    },
-    {
-      img: `images/test.png`,
-      h4: `Premium Admin Template`,
-      p3: `
-     Premium coded admin panel, with animations, charts, secure login.
-              Has everything you can ever think of, aesthetic minimalist design,
-              stunning layout, premium font etc.`,
-      demo: `/`,
-    },
-  ];
+async function Change(color) {
+  const responseObject = await fetch(`/api/projects`);
+  const proarr = await responseObject.json();
 
   const pronew = proarr.map((each) => {
     const { img, h4, p3, github, demo } = each;
@@ -151,6 +115,5 @@ function Change(color) {
          `;
   });
 
-  container.innerHTML = pronew.join(` `);
+  container.innerHTML = pronew.reverse().join(` `);
 }
-// Change();

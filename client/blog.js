@@ -37,30 +37,9 @@ lightToggle.forEach((each) => {
   }
 });
 
-function test(color) {
-  blogarr = [
-    {
-      img: `images/test.png`,
-      h4: `Premium Admin Template`,
-      p3: new Date().toDateString(),
-    },
-    {
-      img: `images/test.png`,
-      h4: `Premium Admin Template`,
-      p3: new Date().toDateString(),
-    },
-    {
-      img: `images/test.png`,
-      h4: `Premium Admin Template`,
-      p3: new Date().toDateString(),
-    },
-    {
-      img: `images/test.png`,
-      h4: `Premium Admin Template`,
-      p3: new Date().toDateString(),
-    },
-  ];
-
+async function test(color) {
+  const responseObject = await fetch(`/api/blogs`);
+  const blogarr = await responseObject.json();
   const blognew = blogarr.map((each) => {
     const { img, h4, p3 } = each;
     return `

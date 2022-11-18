@@ -100,47 +100,96 @@
           was no immediate response. <br /><br />
           <span class="span">Thanks for your co-operation!</span>
         </p>
-        <form class="form">
+        <form action="/api/email" method="post" class="form">
           <p class="p">Your name</p>
-          <input type="text" placeholder="Your name" class="textInput" />
+          <input
+            type="text"
+            placeholder="Your name"
+            class="textInput"
+            name="name"
+            required
+          />
           <p class="p">Email</p>
-          <input type="text" placeholder="Your Email" class="textInput" />
+          <input
+            type="email"
+            placeholder="Your Email"
+            class="mailInput"
+            name="email"
+            required
+          />
           <div class="checkbox">
             <p class="p">I need a partner to help me with:</p>
             <div class="con">
               <div class="con1">
-                <input type="checkbox" value="Your Email" />
+                <input
+                  type="radio"
+                  class="test"
+                  name="service"
+                  value="Front End Development"
+                  required
+                />
                 <p class="p">Front End Development</p>
               </div>
               <div class="con1">
-                <input type="checkbox" value="Your Email" />
+                <input
+                  type="radio"
+                  class="test"
+                  name="service"
+                  value="Back End Development"
+                />
                 <p class="p">Back End Development</p>
               </div>
               <div class="con1">
-                <input type="checkbox" value="Your Email" />
+                <input
+                  type="radio"
+                  class="test"
+                  name="service"
+                  value="Product/Tool/Saas Development"
+                />
                 <p class="p">Product/Tool/Saas Development</p>
               </div>
               <div class="con1">
-                <input type="checkbox" value="Your Email" />
+                <input type="radio" class="test" name="service" value="Other" />
                 <p class="p">Other</p>
               </div>
             </div>
             <p class="p">My Budget Range is</p>
             <div class="con">
               <div class="con1">
-                <input type="checkbox" value="Your Email" />
+                <input
+                  type="radio"
+                  class="test"
+                  name="budget"
+                  value="$2000 - $5000"
+                  required
+                />
                 <p class="p">$2000 - $5000</p>
               </div>
               <div class="con1">
-                <input type="checkbox" value="Your Email" />
+                <input
+                  type="radio"
+                  class="test"
+                  name="budget"
+                  value="$5000 - $10000"
+                />
                 <p class="p">$5000 - $10000</p>
               </div>
               <div class="con1">
-                <input type="checkbox" value="Your Email" />
+                <input
+                  type="radio"
+                  class="test"
+                  name="budget"
+                  value="$10000 - $50000"
+                />
                 <p class="p">$10000 - $50000</p>
               </div>
               <div class="con1">
-                <input type="checkbox" value="Your Email" />
+                <input
+                  type="radio"
+                  class="test"
+                  name="budget"
+                  value="$50000 upward"
+                />
                 <p class="p">$50000 upward</p>
               </div>
             </div>
@@ -148,10 +197,11 @@
           <p class="p">
             More details about the project (brief summary, deadline etc)
           </p>
-          <textarea class="textInput">
+          <textarea name="textArea" class="textArea">
 Short message(optional)
           </textarea>
           <button class="btn">Get in touch</button>
+          <p class="output"></p>
         </form>
       </div>
     </div>

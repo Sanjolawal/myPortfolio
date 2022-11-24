@@ -18,6 +18,15 @@ const getBlogs = async (req, res) => {
     console.log(error);
   }
 };
+const blogDetail = async (req, res) => {
+  try {
+    const response = await blogInterface.findById(req.params).lean();
+    const { img, h4, p3 } = response;
+    res.render(`blogs`, { h4: h4, img: img, p3: p3 });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 const sendEmail = async (req, res) => {
   const { name, email, service, budget, textArea } = req.body;
@@ -59,4 +68,4 @@ const sendEmail = async (req, res) => {
   res.send(`form sent successfully`);
 };
 
-module.exports = { getProjects, getBlogs, sendEmail };
+module.exports = { getProjects, getBlogs, blogDetail, sendEmail };

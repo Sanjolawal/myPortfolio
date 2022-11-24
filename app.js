@@ -2,6 +2,9 @@ const express = require(`express`);
 const app = express();
 const dotenv = require("dotenv").config();
 const path = require(`path`);
+const ejs = require(`ejs`);
+
+app.set(`view engine`, `ejs`);
 
 const port = process.env.PORT || 5000;
 const connectDatabase = async () => {

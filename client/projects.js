@@ -71,8 +71,8 @@ async function Change(color) {
                <img  src=${img} class="Img" alt="img" />
                  <div class="overlay">
                  <div class="con">
-                  <a href=${github} class="btn1"> Github </a>
-                 <a href=${demo} class="btn2"> Demo </a>
+                  <a href=${github} target="_blank" class="btn1"> Github </a>
+                 <a href=${demo} target="_blank" class="btn2"> Demo </a>
                    </div>
                   </div>
                  </div>
@@ -89,7 +89,9 @@ async function Change(color) {
                <img  src=${img} class="Img" alt="img" />
                  <div class="overlay">
                  <div class="con">
-                  <a href=${github ? github : demo} class="btn1">${
+                  <a href=${
+                    github ? github : demo
+                  } target="_blank" class="btn1">${
         github ? `Github` : `Demo`
       }</a>
                    </div>

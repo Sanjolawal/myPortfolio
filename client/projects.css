@@ -1,5 +1,6 @@
 .project {
   color: black;
+  font-family: "DM Sans", sans-serif;
 }
 .project .h1 {
   font: clamp(22px, 1.5vw, 1.6vw) montserrat;

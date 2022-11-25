@@ -1,11 +1,13 @@
 .blog .h1 {
   font: clamp(22px, 1.5vw, 1.6vw) montserrat;
   margin: 5vh 0 0vh 2vw;
+  font-family: 'DM Sans', sans-serif;
 }
 .blog .span1 {
   font: clamp(13px, 1vw, 1.1vw) roboto slab;
   font-weight: 300;
   margin: 0vh 0 0vh 2vw;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .container {

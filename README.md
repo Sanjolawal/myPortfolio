@@ -6,13 +6,21 @@ Please register for the full experience.
 
 # Technologies Used
 JavaScript (ES5)
+
 html
+
 css
+
 NodeJs
+
 ExpressJs
+
 Mongoose
+
 Nodemon
+
 Dotenv
+
 Git/Github
 
 

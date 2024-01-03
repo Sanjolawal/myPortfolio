@@ -12,6 +12,7 @@ const connectDatabase = async () => {
     const mongoose = require(`mongoose`);
     const connection = await mongoose.connect(process.env.database);
     console.log(`connected to database`);
+    console.log(port);
     app.listen(port, console.log(`Server is listening to request`));
     app.use(express.static(`client`));
     app.use(express.urlencoded({ extended: false }));

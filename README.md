@@ -1,16 +1,16 @@
 # About
-This was a personal full stack project. website was built using html, css and JavaScript primarily for the frontend, Express for the backed, and utilised mongodb database (for storing and fetching APIs stored espectively). I enjoyed the lessons learnt and fun experienced during the web development.
+This was a personal full-stack project. the website was built using HTML, CSS, and JavaScript primarily for the front end, Express for the back, and the MongoDB database (for storing and fetching APIs stored respectively). I enjoyed the lessons learned and the fun experienced during the web development.
 
-Please view the end result here: https://myportfolio-production-a360.up.railway.app/
+Please view the result here: https://sanjo.onrender.com/
 
-site might take a while to load, using hosting freeplan
+the site might take a while to load, using a hosting free plan
 
 # Technologies Used
 JavaScript (ES5)
 
 html
 
-css
+CSS
 
 NodeJs
 
